@@ -1,0 +1,23 @@
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 0 auto;
+    width: 1440px;
+    background-color: #f6f6f6;
+}
+
+.portfolio__title {
+    margin: 0;
+    font-size: 34px;
+    line-height: 42px;
+    font-weight: bold;
+    text-align: center;
+    margin: 112px auto 47px auto;
+
+}
+
+@media (max-width:1440px) {
+    .portfolio {
+        width: 100%;
+    }
+}

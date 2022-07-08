@@ -1,0 +1,163 @@
+.myFace {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 100px auto;
+    width: 940px;
+}
+
+.myFace__container {
+    width: 940px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 40px auto 0 auto;
+}
+
+.myFace__title {
+    margin: 0;
+    width: 123px;
+    font-size: 47px;
+    line-height: 59px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.myFace__about {
+    margin: 0;
+    width: 200px;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 500;
+    margin: auto 0 0 0;
+    text-align: center;
+
+}
+
+.myFase__lang-container {
+    display: flex;
+    flex-direction: row;
+    transform: rotate(-90deg);
+    margin: auto -15px 20px 0;
+    justify-content: space-between;
+}
+
+.myFase__lang {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+}
+
+.myFase__lang_gray {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: bold;
+    color: #828282;
+    text-decoration: none;
+}
+
+.myface__lang-border {
+    border-right: #000000 2px solid;
+    height: 20px;
+    margin: 0 5px 0 5px;
+
+}
+
+.myFase__lang:hover {
+    opacity: 0.7;
+}
+
+.myFase__lang_gray:hover {
+    opacity: 0.7;
+
+}
+
+.myFace__button {
+    padding: 0;
+    width: 33px;
+    margin: -180px 0 auto auto;
+    display: none;
+    border: none;
+}
+
+.myFace__button:hover {
+    cursor: pointer;
+}
+
+.myFace__button-image {
+    display: none;
+    margin: 0 0 auto auto;
+    width: 33px;
+    box-shadow: none;
+    outline: none;
+}
+
+.myFace__image-container {
+    width: 940px;
+    position: relative;
+    padding-top: 50%;
+    margin: 100px auto 0 auto;
+}
+
+.myFace__image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: contain;
+}
+
+
+@media (max-width:999px) {
+    .myFace__container {
+        width: 100%;
+        margin: 40px auto 0 auto;
+    }
+
+    .myFace {
+        width: 90%;
+        margin: 0 auto 0 auto;
+    }
+
+    .myFace__image-container {
+        width: 100%;
+        margin: 100px auto 50px auto;
+        padding-top: 70%;
+    }
+}
+
+@media (max-width:600px) {
+    .myFase__lang-container {
+        display: none;
+    }
+
+    .myFace__button {
+        display: flex;
+    }
+
+    .myFace__button-image {
+        display: flex;
+    }
+
+    .myFace__container {
+        flex-direction: column;
+        margin: 0px auto 0 auto;
+    }
+
+    .myFace {
+        margin: 65px auto 0 auto;
+    }
+
+    .myFace__about {
+        margin: 25px auto 0 0;
+        text-align: start;
+    }
+
+    .myFace__image-container {
+        width: 100%;
+        margin: 210px auto 50px auto;
+    }
+
+}

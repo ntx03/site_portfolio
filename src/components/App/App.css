@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+  background-color: #ffffff;
+  max-width: 100%;
+  margin: 0 auto 0 auto;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Gilroy';
+  color: #070707;
+  font-size: 18px;
+
+}
