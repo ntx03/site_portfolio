@@ -1,0 +1,131 @@
+.navigation {
+    max-width: 1280px;
+    background: #ffffff;
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0.2s, opacity 0.2s linear;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation_open {
+    max-width: 1280px;
+    background: #ffffff;
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    transition: visibility 0.2s, opacity 0.2s linear;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+    overflow-Y: auto;
+}
+
+.navigation__container {
+    width: 100%;
+    height: 120vh;
+    margin: 66px 0 0 0;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    opacity: 1;
+    visibility: visible;
+    transition: visibility 0.2s, opacity 0.2s linear;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: auto;
+    right: 0;
+    z-index: 1;
+}
+
+.navigation__container-link {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 0 26px;
+    height: min-content;
+}
+
+.navigation__link {
+    font-size: 34px;
+    line-height: 42px;
+    font-weight: bold;
+    text-align: start;
+    text-decoration: none;
+    color: #090909;
+    margin-bottom: 68px;
+}
+
+.navigation__link:last-child {
+    margin-bottom: 0px;
+}
+
+.navigation__container-button {
+    display: flex;
+    flex-direction: column;
+
+    height: 689px;
+    justify-content: space-between;
+
+}
+
+.navigation__button {
+    padding: 0;
+    width: 22px;
+    height: 22px;
+    margin: 0 0 0 auto;
+    background-color: #ffffff;
+    margin-right: 26px;
+    border: none;
+}
+
+
+
+.navigation__button:hover {
+    cursor: pointer;
+    transition: 0.5s;
+    opacity: 0.7;
+}
+
+.navigation__lang-container {
+    display: flex;
+    flex-direction: row;
+    transform: rotate(90deg);
+    margin: 0 -26px 0 auto;
+    justify-content: space-between;
+}
+
+.navigation__lang {
+    font-size: 34px;
+    line-height: 42px;
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+}
+
+.navigation__lang_gray {
+    font-size: 34px;
+    line-height: 42px;
+    font-weight: bold;
+    color: #828282;
+    text-decoration: none;
+}
+
+.navigation__lang-border {
+    border-right: #000000 5px solid;
+    height: 32px;
+    margin: 8px 10px 0 10px;
+}

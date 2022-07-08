@@ -1,33 +1,42 @@
 import './App.css';
 import React from 'react';
-import Header from '../Header/Header';
-import MyFace from '../myFace/myFace';
-import AboutMe from '../AboutMe/AboutMe';
-import Skills from '../Skills/Skills';
-import Portfolio from '../Portfolio/Portfolio';
-import Footer from '../Footer/Footer';
+import Navigation from '../Navigation/Navigation';
+import { Routes, Route, useLocation } from 'react-router';
+import Ru from '../Ru/Ru';
+import En from '../En/En';
 
 function App() {
-  // состояние ширины экрана
-  const [width, setWidth] = React.useState(window.innerWidth);
 
-  // мониторим ширину экрана
+  let location = useLocation();
+
+  const [navigation, setNavigation] = React.useState(false);
+
+  const [EnLanguage, setEnLanguage] = React.useState(false);
+
   React.useEffect(() => {
-    const handleResizeWindow = () => setWidth(window.innerWidth);
-    window.addEventListener("resize", handleResizeWindow);
-    return () => {
-      window.removeEventListener("resize", handleResizeWindow);
-    };
-  }, []);
+    if (location.pathname === '/') {
+      setEnLanguage(false);
+    }
+    if (location.pathname === '/en') {
+      setEnLanguage(true);
+    }
+  }, [location.pathname])
+
+  function closeNavigationMenu() {
+    setNavigation(false);
+  }
+
+  function openNavigationMenu() {
+    setNavigation(true);
+  }
 
   return (
     <div className="App">
-      <Header />
-      <MyFace />
-      <AboutMe />
-      <Skills />
-      <Portfolio />
-      <Footer />
+      <Routes>
+        <Route path='/' element={<Ru isOpen={openNavigationMenu} lang={EnLanguage} />} />
+        <Route path='/en' element={<En isOpen={openNavigationMenu} lang={EnLanguage} />} />
+      </Routes>
+      <Navigation isOpen={navigation} isClose={closeNavigationMenu} lang={EnLanguage} />
     </div>
   );
 }

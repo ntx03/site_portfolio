@@ -6,11 +6,11 @@ import JS from '../../img/js.png';
 import react from '../../img/react.png';
 import node from '../../img/node.png';
 
-function Skills() {
+function Skills({ lang }) {
     return (
-        <div className='skills'>
-            <h2 className='skills__title'>Навыки</h2>
-            <p className='skills__text'>Я работаю с технологиями</p>
+        <div className='skills' id='skills'>
+            <h2 className='skills__title'>{lang ? 'Skills' : 'Навыки'}</h2>
+            <p className='skills__text'>{lang ? 'I work with technology' : 'Я работаю с технологиями'}</p>
             <div className='skills__container'>
                 <div className='skills__card'>
                     <img className='skills__image' alt='HTML' src={HTML} />

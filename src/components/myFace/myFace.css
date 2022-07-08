@@ -98,6 +98,8 @@
     position: relative;
     padding-top: 50%;
     margin: 100px auto 0 auto;
+    display: none;
+    border-radius: 20px;
 }
 
 .myFace__image {
@@ -107,6 +109,7 @@
     top: 0;
     left: 0;
     object-fit: contain;
+    border-radius: 20px;
 }
 
 
@@ -118,7 +121,6 @@
 
     .myFace {
         width: 90%;
-        margin: 0 auto 0 auto;
     }
 
     .myFace__image-container {
@@ -131,6 +133,11 @@
 @media (max-width:600px) {
     .myFase__lang-container {
         display: none;
+    }
+
+
+    .myFace {
+        margin: 0 auto 0 auto;
     }
 
     .myFace__button {
@@ -158,6 +165,7 @@
     .myFace__image-container {
         width: 100%;
         margin: 210px auto 50px auto;
+        display: flex;
     }
 
 }
