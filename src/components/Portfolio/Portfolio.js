@@ -1,16 +1,24 @@
 import './Portfolio.css';
 import React from 'react';
 import service from '../../img/diplom.png';
-import mesto from '../../img/mesto.png';
-import korotaeva from '../../img/korotaeva.png';
-import travel from '../../img/travel.png';
+import mesto from '../../img/mesto.jpg';
+import korotaeva from '../../img/korotaeva.jpg';
+import travel from '../../img/travel.jpg';
 import learn from '../../img/learn.png';
 import CardPortfolio from './CardPortfolio/CardPortfolio';
+import floristman from '../../img/floristman.png';
 
 function Portfolio({ lang }) {
     return (
         <div className='portfolio' id='portfolio'>
             <h2 className='portfolio__title'>{lang ? 'My projects' : ' Мои проекты'}</h2>
+            <CardPortfolio
+                linkSite={'https://flower-shop-ecru.vercel.app'}
+                image={floristman}
+                name={lang ? 'Flower online store' : 'Цветочный интернет магазин'}
+                linkGit={'https://github.com/ntx03/flower-shop'}
+                lang={lang}
+            />
             <CardPortfolio
                 linkSite={'https://ntx033.kachur.nomoreparties.sbs'}
                 image={service}
